@@ -4,7 +4,7 @@ source ./conf.sh
 
 cd $SRC_ROOT_PATH;
 
-NGINX_SRC=nginx-1.0.15
+NGINX_SRC=nginx-1.2.5
 rm -rf $NGINX_SRC
 tar zxvf $NGINX_SRC.tar.gz
 rm -rf pcre-8.12
