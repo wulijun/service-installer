@@ -5,6 +5,7 @@ HOME_PATH=/home/$CUR_USER
 
 INSTALL_MYSQL_PATH=$HOME_PATH"/mysql5"
 MYSQL_PORT=3306
+MYSQL_FILE=mysql-5.5.28
 
 #lib install path
 LIB_PATH="$HOME_PATH/lib"
