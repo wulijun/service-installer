@@ -53,7 +53,7 @@ rm -rf $EXTNAME
 #cd ../
 #rm -rf $EXTNAME
 
-EXTNAME=phpredis-2.1.3
+EXTNAME=phpredis-2.2.2
 tar -xzvf $EXTNAME.tar.gz
 cd $EXTNAME
 $INSTALL_PHP_PATH/bin/phpize

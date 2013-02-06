@@ -24,6 +24,7 @@ socket		= /home/worker/mysql5/mysql.sock
 # The MySQL server
 [mysqld]
 port		= 8400
+user = worker
 socket		= /home/worker/mysql5/mysql.sock
 skip-external-locking
 key_buffer_size = 1024M

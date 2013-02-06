@@ -4,25 +4,26 @@ source ./conf.sh
 
 cd $SRC_ROOT_PATH;
 
-NGINX_SRC=nginx-1.2.5
+NGINX_SRC=nginx-1.2.6
 rm -rf $NGINX_SRC
 tar zxvf $NGINX_SRC.tar.gz
-rm -rf pcre-8.12
-tar zxvf pcre-8.12.tar.gz
+PCRE_SRC=pcre-8.32
+rm -rf $PCRE_SRC
+tar zxvf $PCRE_SRC.tar.gz
 
 #tar third modules
 cd $SRC_ROOT_PATH"/third_mod"
 rm -rf headers-more-nginx-module
 tar -zxvf headers-more-nginx-module.tar.gz
-rm -rf taobao-nginx-http-concat
-tar -xzvf taobao-nginx-http-concat.tar.gz
+#rm -rf taobao-nginx-http-concat
+#tar -xzvf taobao-nginx-http-concat.tar.gz
 
 cd $SRC_ROOT_PATH/$NGINX_SRC
 
 make clean
 ./configure \
     --prefix=$INSTALL_PATH  \
-    --with-pcre=$SRC_ROOT_PATH"/pcre-8.12" \
+    --with-pcre=$SRC_ROOT_PATH"/$PCRE_SRC" \
     --http-log-path=$INSTALL_PATH"/logs/access_log" \
     --error-log-path=$INSTALL_PATH"/logs/error_log" \
     --with-http_realip_module \
@@ -32,8 +33,9 @@ make clean
     --http-fastcgi-temp-path=$INSTALL_PATH"/cache/fastcgi" \
     --http-uwsgi-temp-path=$INSTALL_PATH"/cache/uwsgi" \
     --http-scgi-temp-path=$INSTALL_PATH"/cache/scgi" \
-    --add-module=$SRC_ROOT_PATH"/third_mod/headers-more-nginx-module" \
-    --add-module=$SRC_ROOT_PATH"/third_mod/taobao-nginx-http-concat"
+#    --add-module=$SRC_ROOT_PATH"/third_mod/taobao-nginx-http-concat" \
+    --add-module=$SRC_ROOT_PATH"/third_mod/headers-more-nginx-module"
+
 make 
 make install
 

@@ -3,8 +3,9 @@
 source ./conf.sh
 
 cd $SRC_ROOT_PATH
-tar zxvf curl-7.21.6.tar.gz
-cd curl-7.21.6
+CURL_SRC=curl-7.28.1
+tar zxvf $CURL_SRC.tar.gz
+cd $CURL_SRC
 make clean
 ./configure --prefix=$LIB_PATH --enable-http \
 	--enable-ftp --enable-file --enable-ldap --enable-dict --enable-telnet \
@@ -14,4 +15,4 @@ make
 make install
 
 cd ../
-#rm -rf curl-7.21.6
+#rm -rf $CURL_SRC
