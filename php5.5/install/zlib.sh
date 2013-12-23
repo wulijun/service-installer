@@ -11,4 +11,4 @@ make
 make install
 
 cd ../
-#rm -rf zlib-1.2.8
+rm -rf zlib-1.2.8

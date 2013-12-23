@@ -3,12 +3,13 @@
 source ./conf.sh
 
 cd $SRC_ROOT_PATH
-tar zxvf libpng-1.5.17.tar.gz
-cd libpng-1.5.17
+LIBPNG_SRC=libpng-1.2.50
+tar zxvf $LIBPNG_SRC.tar.gz
+cd $LIBPNG_SRC
 make clean
-./configure --prefix=$LIB_PATH --with-zlib-prefix=$LIB_PATH
+./configure --prefix=$LIB_PATH
 make
 make install
 
 cd ../
-#rm -rf libpng-1.5.17
+rm -rf $LIBPNG_SRC
