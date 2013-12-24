@@ -11,4 +11,4 @@ make
 make install
 
 cd ../
-
+rm -rf libdatrie-0.2.4

@@ -39,7 +39,7 @@ PATH=$PATH:$LIB_PATH/bin
 	--enable-fpm \
 	--without-pear \
 	--without-sqlite \
-    --without-sqlite3 \
+	--without-sqlite3 \
 	--without-pdo-sqlite \
 	--enable-pcntl \
 	--enable-bcmath
