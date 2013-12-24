@@ -44,7 +44,7 @@ PATH=$PATH:$LIB_PATH/bin
 	--enable-pcntl \
 	--enable-bcmath
 make && make install
-cp ./sapi/fpm/init.d.php-fpm $INSTALL_PHP_PATH/sbin/
+cp ./sapi/fpm/init.d.php-fpm ./sapi/fpm/status.html $INSTALL_PHP_PATH/sbin/
 chmod +x $INSTALL_PHP_PATH/sbin/init.d.php-fpm
 cp $SRC_ROOT_PATH/rotate_log.sh $INSTALL_PHP_PATH/sbin/
 chmod +x $INSTALL_PHP_PATH/sbin/rotate_log.sh
