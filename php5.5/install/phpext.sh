@@ -10,7 +10,7 @@ cd $EXTNAME
 $INSTALL_PHP_PATH/bin/phpize
 ./configure --with-php-config=$INSTALL_PHP_PATH/bin/php-config                
 make
-cp modules/*.so $INSTALL_PHP_PATH/lib/exts/
+cp modules/*.so $INSTALL_PHP_PATH/lib/php/extensions/no-debug-non-zts-20121212
 cd ../
 rm -rf $EXTNAME
 
@@ -20,6 +20,6 @@ cd $EXTNAME
 $INSTALL_PHP_PATH/bin/phpize
 ./configure --with-php-config=$INSTALL_PHP_PATH/bin/php-config
 make
-cp modules/*.so $INSTALL_PHP_PATH/lib/exts/
+cp modules/*.so $INSTALL_PHP_PATH/lib/php/extensions/no-debug-non-zts-20121212
 cd ../
 rm -rf $EXTNAME
