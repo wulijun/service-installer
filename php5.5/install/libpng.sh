@@ -3,7 +3,7 @@
 source ./conf.sh
 
 cd $SRC_ROOT_PATH
-LIBPNG_SRC=libpng-1.2.50
+LIBPNG_SRC=libpng-1.2.51
 tar zxvf $LIBPNG_SRC.tar.gz
 cd $LIBPNG_SRC
 make clean

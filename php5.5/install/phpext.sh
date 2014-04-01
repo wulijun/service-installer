@@ -14,7 +14,7 @@ cd $SRC_ROOT_PATH
 #cd ../
 #rm -rf $EXTNAME
 
-EXTNAME=phpredis-2.2.4
+EXTNAME=phpredis-2.2.5
 tar -xzvf $EXTNAME.tar.gz
 cd $EXTNAME
 $INSTALL_PHP_PATH/bin/phpize
