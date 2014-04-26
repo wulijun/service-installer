@@ -3,7 +3,7 @@
 source ./conf.sh
 
 cd $SRC_ROOT_PATH
-PHPNAME=php-5.5.10
+PHPNAME=php-5.5.11
 tar -xzvf $PHPNAME.tar.gz
 cd $PHPNAME
 make clean
@@ -62,6 +62,6 @@ sed -e "s:/home/worker/php5:$INSTALL_PHP_PATH:g" -i $PHP_CONF_PATH/php.ini
 
 #mkdir -p $HOME_PATH/app-php/webroot
 #cp -r $SRC_ROOT_PATH/../webroot/* $HOME_PATH/app-php/webroot/
-#cd $ROOT_PATH 
+cd $ROOT_PATH 
 
 sh ./install/phpext.sh
