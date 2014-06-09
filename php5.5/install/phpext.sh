@@ -4,8 +4,8 @@ source ./conf.sh
 
 cd $SRC_ROOT_PATH
 
-#EXTNAME=djutil-1.0.0
-#tar -xzvf $EXTNAME.tgz
+#EXTNAME=djutil-1.0.1
+#tar -xzvf $EXTNAME.tar.gz
 #cd $EXTNAME
 #$INSTALL_PHP_PATH/bin/phpize
 #./configure --with-php-config=$INSTALL_PHP_PATH/bin/php-config
