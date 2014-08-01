@@ -18,3 +18,5 @@ B）执行install.sh
 
 C) 完成安装后，默认的配置文件nginx.conf+upstream.conf是用于和PHP配合使用，如果nginx是作为反向代理服务器，
 请使用nginx.conf.proxy这个配置。
+
+4、PHP安装过程中如果出现xpm相关的错误，则需要先手动安装libXpm和libXpm-devel，并且需要在install-php.sh里增加--with-xpm-dir选项。
