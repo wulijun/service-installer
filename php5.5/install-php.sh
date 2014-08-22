@@ -23,6 +23,7 @@ PATH=$PATH:$LIB_PATH/bin
 	--with-iconv \
 	--enable-mbstring \
 	--with-xmlrpc \
+	--with-openssl \
     --enable-dom \
     --enable-opcache \
 	--enable-sockets \
