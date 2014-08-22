@@ -46,6 +46,7 @@ bulk_insert_buffer_size = 256M
 long_query_time=10
 slow-query-log=1
 skip-name-resolve
+explicit_defaults_for_timestamp=true
 
 # Don't listen on a TCP/IP port at all. This can be a security enhancement,
 # if all processes that need to connect to mysqld run on the same host.
@@ -134,7 +135,6 @@ slave-skip-errors=all
 # You can set .._buffer_pool_size up to 50 - 80 %
 # of RAM but beware of setting memory usage too high
 innodb_buffer_pool_size = 10G
-innodb_additional_mem_pool_size = 20M
 # Set .._log_file_size to 25 % of buffer pool size
 #innodb_log_file_size = 100M
 innodb_log_buffer_size = 8M
