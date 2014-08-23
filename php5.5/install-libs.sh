@@ -1,6 +1,6 @@
 #!/bin/sh
 
-
+sh ./install/zlib.sh
 sh ./install/freetype.sh
 sh ./install/jpegsrc.sh
 sh ./install/libpng.sh
