@@ -3,7 +3,7 @@
 source ./conf.sh
 
 cd $SRC_ROOT_PATH
-PHPNAME=php-5.5.13
+PHPNAME=php-5.5.16
 tar -xzvf $PHPNAME.tar.gz
 cd $PHPNAME
 make clean
@@ -13,7 +13,8 @@ PATH=$PATH:$LIB_PATH/bin
 	--with-jpeg-dir=$LIB_PATH  \
 	--with-png-dir=$LIB_PATH \
 	--with-freetype-dir=$LIB_PATH \
-	--with-zlib-dir=$LIB_PATH \
+	--with-xpm-dir=/usr/lib64 \
+	--with-zlib \
 	--with-gd=$LIB_PATH \
 	--with-mcrypt=$LIB_PATH \
 	--with-mysql=mysqlnd \
