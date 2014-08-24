@@ -59,7 +59,8 @@ mkdir -p $INSTALL_PHP_PATH/etc
 cp -r $CONF_ROOT_PATH/* $INSTALL_PHP_PATH/etc/
 #mv $INSTALL_PHP_PATH/etc/php.ini $PHP_CONF_PATH
 sed -e "s:/home/worker/php5:$INSTALL_PHP_PATH:g" -i $INSTALL_PHP_PATH/etc/php-fpm.conf
-sed -e "s:{CUR_USER}:$CUR_USER:g" -i $INSTALL_PHP_PATH/etc/php-fpm.conf
+sed -e "s:/home/worker/php5:$INSTALL_PHP_PATH:g" -i $INSTALL_PHP_PATH/etc/pool.d/www.php.pool.conf
+sed -e "s:{CUR_USER}:$CUR_USER:g" -i $INSTALL_PHP_PATH/etc/pool.d/www.php.pool.conf
 sed -e "s:/home/worker/php5:$INSTALL_PHP_PATH:g" -i $PHP_CONF_PATH/php.ini
 
 #mkdir -p $HOME_PATH/app-php/webroot
