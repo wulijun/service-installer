@@ -14,7 +14,7 @@ PATH=$PATH:$LIB_PATH/bin
 	--with-png-dir=$LIB_PATH \
 	--with-freetype-dir=$LIB_PATH \
 	--with-xpm-dir=/usr/lib64 \
-	--with-zlib \
+	--with-zlib-dir=$LIB_PATH \
 	--with-gd=$LIB_PATH \
 	--with-mcrypt=$LIB_PATH \
 	--with-mysql=mysqlnd \
