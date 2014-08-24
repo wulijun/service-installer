@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ./conf.sh
+. ./conf.sh
 
 cd $SRC_ROOT_PATH
 LIBGD_SRC=libgd-2.1.0
