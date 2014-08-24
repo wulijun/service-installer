@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ./conf.sh
+. ./conf.sh
 
 cd $SRC_ROOT_PATH
 MCRYPT_SRC=libmcrypt-2.5.8
