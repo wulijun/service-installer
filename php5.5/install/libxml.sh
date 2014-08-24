@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ./conf.sh
+. ./conf.sh
 
 cd $SRC_ROOT_PATH
 tar zxvf libxml2-2.9.1.tar.gz

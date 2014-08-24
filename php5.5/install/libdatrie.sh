@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ./conf.sh
+. ./conf.sh
 
 cd $SRC_ROOT_PATH
 tar zxvf libdatrie-0.2.4.tar.gz

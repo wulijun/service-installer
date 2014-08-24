@@ -1,6 +1,6 @@
 #!/bin/sh
 CONF_FILE=`pwd`"/../conf.sh"
-source $CONF_FILE
+. $CONF_FILE
 
 ROOT_PATH=`pwd`
 SRC_ROOT_PATH=$ROOT_PATH"/../src"
