@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source ./conf.sh
+. ./conf.sh
 
 cd $SRC_ROOT_PATH
 PHPNAME=php-5.5.16
