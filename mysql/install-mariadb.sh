@@ -19,7 +19,7 @@ make
 make install
 cd ..
 
-$INSTALL_MYSQL_PATH/scripts/mysql_install_db --basedir=$INSTALL_MYSQL_PATH --datadir=$INSTALL_MYSQL_PATH/var --ldata=$INSTALL_MYSQL_PATH/var
+$INSTALL_MYSQL_PATH/scripts/mysql_install_db --basedir=$INSTALL_MYSQL_PATH --datadir=$INSTALL_MYSQL_PATH/var 
 cp $INSTALL_MYSQL_PATH/support-files/my-huge.cnf $INSTALL_MYSQL_PATH/my.cnf
 cp $SRC_ROOT_PATH/my.cnf.* $INSTALL_MYSQL_PATH/
 $INSTALL_MYSQL_PATH/bin/mysqld_safe --defaults-file=$INSTALL_MYSQL_PATH/my.cnf --datadir=$INSTALL_MYSQL_PATH/var &
