@@ -1,0 +1,10 @@
+yii-1.1.15  
+https://github.com/yiisoft/yii/releases/download/1.1.15/yii-1.1.15.022a51.tar.gz
+Add these extensions:
+
+
+predis-1.0.x
+https://github.com/nrk/predis/releases/latest
+
+raven-php-0.10.0
+https://github.com/getsentry/raven-php/archive/0.10.0.tar.gz

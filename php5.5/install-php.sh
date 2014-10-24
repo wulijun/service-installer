@@ -3,7 +3,7 @@
 . ./conf.sh
 
 cd $SRC_ROOT_PATH
-PHPNAME=php-5.5.16
+PHPNAME=php-5.6.2
 tar -xzvf $PHPNAME.tar.gz
 cd $PHPNAME
 make clean
@@ -52,12 +52,10 @@ mkdir -p $INSTALL_PHP_PATH/data
 cp -r $DATA_ROOT_PATH/* $INSTALL_PHP_PATH/data/
 
 mkdir -p $INSTALL_PHP_PATH/lib/php-libs
-cp -r $SRC_ROOT_PATH/php-exts/* $INSTALL_PHP_PATH/lib/php/extensions/no-debug-non-zts-20121212
 cp -r $SRC_ROOT_PATH/php-libs/* $INSTALL_PHP_PATH/lib/php-libs
 
 mkdir -p $INSTALL_PHP_PATH/etc
 cp -r $CONF_ROOT_PATH/* $INSTALL_PHP_PATH/etc/
-#mv $INSTALL_PHP_PATH/etc/php.ini $PHP_CONF_PATH
 sed -e "s:/home/worker/php5:$INSTALL_PHP_PATH:g" -i $INSTALL_PHP_PATH/etc/php-fpm.conf
 sed -e "s:/home/worker/php5:$INSTALL_PHP_PATH:g" -i $INSTALL_PHP_PATH/etc/pool.d/www.php.pool.conf
 sed -e "s:{CUR_USER}:$CUR_USER:g" -i $INSTALL_PHP_PATH/etc/pool.d/www.php.pool.conf

@@ -9,8 +9,7 @@ tar -xzvf $EXTNAME.tar.gz
 cd $EXTNAME
 $INSTALL_PHP_PATH/bin/phpize
 ./configure --with-php-config=$INSTALL_PHP_PATH/bin/php-config
-make
-cp modules/*.so $INSTALL_PHP_PATH/lib/php/extensions/no-debug-non-zts-20121212
+make && make install
 cd ../
 rm -rf $EXTNAME
 
@@ -19,8 +18,7 @@ tar -xzvf $EXTNAME.tgz
 cd $EXTNAME
 $INSTALL_PHP_PATH/bin/phpize
 ./configure --with-php-config=$INSTALL_PHP_PATH/bin/php-config
-make
-cp modules/*.so $INSTALL_PHP_PATH/lib/php/extensions/no-debug-non-zts-20121212
+make && make install
 cd ../
 rm -rf $EXTNAME
 
