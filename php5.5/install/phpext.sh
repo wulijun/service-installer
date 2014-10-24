@@ -13,7 +13,7 @@ make && make install
 cd ../
 rm -rf $EXTNAME
 
-EXTNAME=mongo-1.5.5
+EXTNAME=mongo-1.5.7
 tar -xzvf $EXTNAME.tgz
 cd $EXTNAME
 $INSTALL_PHP_PATH/bin/phpize
