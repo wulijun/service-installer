@@ -3,7 +3,7 @@
 . ./conf.sh
 
 cd $SRC_ROOT_PATH
-PHPNAME=php-5.6.3
+PHPNAME=php-5.6.15
 tar -xzvf $PHPNAME.tar.gz
 cd $PHPNAME
 make clean
@@ -31,6 +31,7 @@ PATH=$PATH:$LIB_PATH/bin
 	--enable-ftp \
 	--enable-shmop \
 	--enable-exif \
+        --enable-zip \
 	--with-config-file-path=$PHP_CONF_PATH \
 	--enable-xml \
 	--with-libxml-dir=$LIB_PATH \

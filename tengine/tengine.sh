@@ -4,10 +4,10 @@ source ./conf.sh
 
 cd $SRC_ROOT_PATH;
 
-NGINX_SRC=tengine-2.0.2
+NGINX_SRC=tengine-2.1.1
 rm -rf $NGINX_SRC
 tar zxvf $NGINX_SRC.tar.gz
-PCRE_SRC=pcre-8.35
+PCRE_SRC=pcre-8.37
 rm -rf $PCRE_SRC
 tar zxvf $PCRE_SRC.tar.gz
 
@@ -24,6 +24,7 @@ make clean
 ./configure \
     --prefix=$INSTALL_PATH  \
     --with-pcre=$SRC_ROOT_PATH"/$PCRE_SRC" \
+    --with-jemalloc \
     --http-log-path=$INSTALL_PATH"/logs/access_log" \
     --error-log-path=$INSTALL_PATH"/logs/error_log" \
     --with-http_realip_module \
@@ -31,13 +32,16 @@ make clean
     --http-client-body-temp-path=$INSTALL_PATH"/cache/client_body" \
     --http-proxy-temp-path=$INSTALL_PATH"/cache/proxy" \
     --http-fastcgi-temp-path=$INSTALL_PATH"/cache/fastcgi" \
-    --http-uwsgi-temp-path=$INSTALL_PATH"/cache/uwsgi" \
-    --http-scgi-temp-path=$INSTALL_PATH"/cache/scgi" \
+    --without-http_uwsgi_module \
+    --without-http_scgi_module \
+    --without-http_memcached_module \
+#    --http-uwsgi-temp-path=$INSTALL_PATH"/cache/uwsgi" \
+#    --http-scgi-temp-path=$INSTALL_PATH"/cache/scgi" \
 #    --add-module=$SRC_ROOT_PATH"/third_mod/taobao-nginx-http-concat" \
 #    --add-module=$SRC_ROOT_PATH"/third_mod/headers-more-nginx-module"
 
 
-make 
+make
 make install
 
 echo "make done!";

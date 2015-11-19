@@ -1,13 +1,13 @@
 #!/bin/sh
 #user home path
 CUR_USER=$USER
-HOME_PATH=/home/$CUR_USER
+HOME_PATH=/usr/local
 
 #PHP5 install path
-INSTALL_PHP_PATH=$HOME_PATH"/php5"
+INSTALL_PHP_PATH=$HOME_PATH"/php5.6"
 
 #lib install path
-LIB_PATH=$HOME_PATH"/lib"
+LIB_PATH="/lib64/php5.6"
 
 ##################################################
 #DONT MODIFY
