@@ -4,10 +4,10 @@ source ./conf.sh
 
 cd $SRC_ROOT_PATH;
 
-NGINX_SRC=tengine-2.1.1
+NGINX_SRC=tengine-2.1.2
 rm -rf $NGINX_SRC
 tar zxvf $NGINX_SRC.tar.gz
-PCRE_SRC=pcre-8.37
+PCRE_SRC=pcre-8.38
 rm -rf $PCRE_SRC
 tar zxvf $PCRE_SRC.tar.gz
 
@@ -39,7 +39,6 @@ make clean
 #    --http-scgi-temp-path=$INSTALL_PATH"/cache/scgi" \
 #    --add-module=$SRC_ROOT_PATH"/third_mod/taobao-nginx-http-concat" \
 #    --add-module=$SRC_ROOT_PATH"/third_mod/headers-more-nginx-module"
-
 
 make
 make install
