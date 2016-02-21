@@ -3,7 +3,7 @@
 . ./conf.sh
 
 cd $SRC_ROOT_PATH
-PHPNAME=php-5.6.15
+PHPNAME=php-5.6.18
 tar -xzvf $PHPNAME.tar.gz
 cd $PHPNAME
 make clean

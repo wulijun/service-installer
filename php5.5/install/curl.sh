@@ -3,7 +3,7 @@
 . ./conf.sh
 
 cd $SRC_ROOT_PATH
-CURL_SRC=curl-7.45.0
+CURL_SRC=curl-7.47.1
 tar zxvf $CURL_SRC.tar.gz
 cd $CURL_SRC
 make clean

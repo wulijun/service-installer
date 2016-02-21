@@ -3,11 +3,11 @@
 . ./conf.sh
 
 cd $SRC_ROOT_PATH
-FREETYPE_SRC=freetype-2.4.12
+FREETYPE_SRC=freetype-2.6.3
 tar zxvf $FREETYPE_SRC.tar.gz
 cd $FREETYPE_SRC
 make clean
-./configure --prefix=$LIB_PATH --without-zlib
+./configure --prefix=$LIB_PATH --without-zlib --with-png=$LIB_PATH
 make
 make install
 
