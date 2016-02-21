@@ -12,6 +12,7 @@ cmake . -DCMAKE_INSTALL_PREFIX=$INSTALL_MYSQL_PATH  \
 -DWITH_EMBEDDED_SERVER=1 -DENABLED_LOCAL_INFILE=1 \
 -DWITH_MYISAM_STORAGE_ENGINE=1 \
 -DWITH_PCRE=bundled -DWITH_ZLIB=bundled \
+-DWITH_JEMALLOC \
 -DMYSQL_UNIX_ADDR=$INSTALL_MYSQL_PATH"/mysql.sock"  \
 -DMYSQL_TCP_PORT=$MYSQL_PORT
 
@@ -19,7 +20,7 @@ make
 make install
 cd ..
 
-$INSTALL_MYSQL_PATH/scripts/mysql_install_db --basedir=$INSTALL_MYSQL_PATH --datadir=$INSTALL_MYSQL_PATH/var 
+$INSTALL_MYSQL_PATH/scripts/mysql_install_db --basedir=$INSTALL_MYSQL_PATH --datadir=$INSTALL_MYSQL_PATH/var
 cp $INSTALL_MYSQL_PATH/support-files/my-huge.cnf $INSTALL_MYSQL_PATH/my.cnf
 cp $SRC_ROOT_PATH/my.cnf.* $INSTALL_MYSQL_PATH/
 $INSTALL_MYSQL_PATH/bin/mysqld_safe --defaults-file=$INSTALL_MYSQL_PATH/my.cnf --datadir=$INSTALL_MYSQL_PATH/var &
