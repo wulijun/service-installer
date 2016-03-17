@@ -13,5 +13,10 @@ cp modules/xdebug.so $INSTALL_PHP_PATH/lib/exts/
 cd ../
 #rm -rf xdebug-2.1.1
 
-#edit php.ini set zend_extension=$INSTALL_PHP_PATH/lib/exts/xdebug.so
+#
+#[xdebug]
+#zend_extension=xdebug.so
+#xdebug.remote_enable=1
+#xdebug.remote_connect_back=1
 #$INSTALL_PHP_PATH/sbin/php-fpm/restart
+#
